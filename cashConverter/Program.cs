@@ -27,6 +27,23 @@ namespace cashConverter
             foreach (XElement element in currencies)
             {
 
+
+
+
+                //                  ---Løsning uden en ekstra liste, klasse og loop---
+                //decimal exhangedAmount = 0;
+
+                //if (code == codeChosen)
+                //{
+                //    exhangedAmount = Decimal.Parse(amountToExhange) / (Decimal.Parse(element.Attribute("rate").Value) / 100);
+                //    Console.WriteLine(exhangedAmount);
+
+                //}
+
+
+
+                //Henter værdierne fra XML filen og sætter den til variabler
+
                 string code = element.Attribute("code").Value;
 
                 string desc = element.Attribute("desc").Value;
@@ -37,7 +54,7 @@ namespace cashConverter
                 //Lavet et object af currency
                 Currency currency = new Currency();
 
-                //Bruger setter metoderne fra klassen til at give en value
+                //Bruger setter metoderne fra klassen til at give en value fra XML
                 currency.Code = code;
                 currency.Desc = desc;
                 currency.Rate = rate;
